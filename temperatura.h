@@ -1,3 +1,9 @@
+/*
+Curso:Programacion Orientada a Objetos
+Nombre: Juan Fernando Obando Castillo       <jobandoc3@est.ups.edu.ec>
+Fecha:29-06-2020
+Practica Temperatura
+*/
 #ifndef TEMPERATURA_H
 #define TEMPERATURA_H
 

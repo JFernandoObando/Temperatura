@@ -17,13 +17,13 @@ Temperatura::Temperatura(QWidget *parent)
     //Conectar para transformar de centigrados a Fahrenheit y Kelvin
     connect(ui->dialCent,SIGNAL(valueChanged(int)),
             this,SLOT(centToFahr(int)));
-     //Conectar para transformar de Fahrenheit a centigrados y Kelvin
+    //Conectar para transformar de Fahrenheit a centigrados y Kelvin
     connect(ui->dialFahr,SIGNAL(valueChanged(int)),
             this,SLOT(fahtToCent(int)));
     //Conectar para transformar de Kelvin a centigrados y Fahrenheit
     connect(ui->dialKelvin,SIGNAL(valueChanged(int)),
             this,SLOT(kelvToCent(int)));
-     //Conectar para cambiar cuando presione el mouse en el dial Cent
+    //Conectar para cambiar cuando presione el mouse en el dial Cent
     connect(ui->dialCent,SIGNAL(sliderPressed()),
             this,SLOT(cambiarMouse()));
     //Conectar para cambiar cuando deje de presionar
@@ -44,7 +44,7 @@ Temperatura::Temperatura(QWidget *parent)
     //el mouse en el dial Kelvin
     connect(ui->dialKelvin,SIGNAL(sliderReleased()),
             this,SLOT(cambiarMouse()));
-     //Establecer valores de inicio  en los dial y los label
+    //Establecer valores de inicio  en los dial y los label
     //Por defecto todos los valores cuando cent valga 0°
     ui->dialFahr->setValue(32);
     ui->dialKelvin->setValue(273);
@@ -114,7 +114,7 @@ void Temperatura::cambiarMouse()
 {
     if(ui->dialCent->hasFocus()){
         if(ui->dialCent->cursor()==Qt::OpenHandCursor){
-        ui->dialCent->setCursor(Qt::ClosedHandCursor);
+            ui->dialCent->setCursor(Qt::ClosedHandCursor);
         }else{
             ui->dialCent->setCursor(Qt::OpenHandCursor);
         }
